@@ -11,7 +11,7 @@ Delete: Remove posts no longer needed.
 
 How to Use 🛠️
 1. Clone the repository:
-   git clone https://github.com/yourusername/blogify.git
+   git clone https://github.com/vivek-dubey-0305/basic-CRUD.git
 
 2. Navigate to the project directory:
    cd blogify
