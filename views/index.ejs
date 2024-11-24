@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-700">
+    <h1 class="text-4xl text-center text-white font-bold mb-7">
+        You can view all the user's POST here
+    </h1>
+
+    <a href="/home/post" class="relative flex justify-end">
+        <span class="absolute top-0 right-0 mt-1 mr-1 h-full w-full rounded bg-gray-700"></span>
+        <span
+            class="fold-bold relative inline-block h-fit w-fit rounded border-2 border-black bg-black px-3 py-1 text-base font-bold text-white transition duration-100 hover:bg-gray-900 hover:text-yellow-500">Add
+            new Post</span>
+    </a>
+    <div class="bg-transparent"></div>
+
+
+
+
+
+    <% for( post of posts ) { %>
+        <div class="mt-1 bg-gradient-to-r from-amber-200 to-yellow-500">
+
+            <div class="flex justify-end">
+                <button
+                    class="bg-black hover:bg-slate-900 text-white font-bold py-2 px-4 border-b-4 border-green-600 hover:border-green-500 rounded"
+                    >
+                    <a href="/home/<%= post.id %>/edit">✏️</a>
+                </button>
+            </div>
+
+
+
+            <h1>
+                <%= post.id %>
+            </h1>
+            <h2 class="text-3xl text-white-300">username : @<%= post.username %>
+            </h2>
+            <h3 class="text-2xl mt-1 mb-2">Content : <%= post.content %>
+            </h3>
+
+
+
+            <div class="flex flex-wrap justify-space-between gap-3">
+
+                <a href="/home/<%= post.id %>" class="relative">
+                    <span class="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-gray-700"></span>
+                    <span
+                        class="fold-bold relative inline-block h-full w-full rounded border-2 border-black bg-black px-3 py-1 text-base font-bold text-white transition duration-100 hover:bg-gray-900 hover:text-yellow-500">View</span>
+                </a>
+                <form action="/home/<%= post.id %>?_method=DELETE" method="post">
+                    <button class="relative">
+                        <span class="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-gray-700"></span>
+                        <span
+                            class="fold-bold relative inline-block h-full w-full rounded border-2 border-black bg-black px-3 py-1 text-base font-bold text-white transition duration-100 hover:bg-gray-900 hover:text-yellow-500">Delete</span>
+                    </button>
+                </form>
+
+            </div>
+
+
+        </div>
+
+        <% } %>
+            </div>
+
+</body>
+
+</html>

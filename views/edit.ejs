@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-700">
+    <h1 class="text-4xl text-center text-white font-bold mb-7">
+        EDIT YOUR POST HERE
+    </h1>
+
+
+<div class="bg-transparent">
+<form action="/home/<%= post.id %>?_method=PATCH" method="post">
+    <div class="mt-1 bg-gradient-to-r from-amber-200 to-yellow-500">
+       
+        <h3>
+            id : <%= post.id %>
+        </h3>
+        <h2 class="text-3xl text-white-300">
+            username : <%= post.username %>
+        </h2>
+        <textarea class="bg-slate-700 text-white text-2xl mt-1 mb-2 w-30 h-fit" cols="40" rows="10" name="content"><%= post.content %></textarea>
+        <button class="block mt-1 w-fit h-fit bg-gradient-to-r from-stone-500 to-stone-700 text-black text-2xl fold-bold" type="submit">COMMIT</button>
+</form>
+
+
+   
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
