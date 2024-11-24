@@ -14,7 +14,7 @@ How to Use 🛠️
    git clone https://github.com/vivek-dubey-0305/basic-CRUD.git
 
 2. Navigate to the project directory:
-   cd blogify
+   cd basic-CRUD
 
 3. Install dependencies
    npm install
