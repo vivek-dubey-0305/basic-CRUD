@@ -26,7 +26,7 @@ How to Use 🛠️
 
 5. http://localhost:(port number)
 
-** FOR SPECIFYIMG PORT CREATE A .env FILE, & ADD THE WRITE PORT = 3000
+** FOR SPECIFYING PORT CREATE A .env FILE, & ADD THE WRITE PORT = 3000
 
 
 
